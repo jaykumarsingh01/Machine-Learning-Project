@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-import xgboost
+import xgboost  
 from xgboost import XGBRegressor
 
 pipe = pickle.load(open('pipe.pkl','rb'))
@@ -85,6 +85,7 @@ if st.button('Predict Score'):
      {'batting_team': [batting_team], 'bowling_team': [bowling_team],'city':city, 'current_score': [current_score],'balls_left': [balls_left], 'wickets_left': [wickets], 'crr': [crr], 'last_five': [last_five]})
     result = pipe.predict(input_df)
     st.header("Predicted Score - " + str(int(result[0])))
+
 
 
 
