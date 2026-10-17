@@ -1,1 +1,1 @@
-# Machone Learning - Projects
+# Machine Learning - Projects
